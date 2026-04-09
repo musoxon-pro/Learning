@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YHQ Duel | AI Raqib bilan Bellashuv</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Font Awesome ikonkalar uchun -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header qismi -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>YHQ<span class="duel-text">DUEL</span></span>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="duel">
+                    <i class="fas fa-gamepad"></i> Duel
+                </button>
+                <button class="nav-btn" data-tab="learn">
+                    <i class="fas fa-book"></i> O'rganish
+                </button>
+                <button class="nav-btn" data-tab="stats">
+                    <i class="fas fa-chart-bar"></i> Statistika
+                </button>
+            </nav>
+            <div class="user-info">
+                <span class="user-level">🚀 Boshlovchi</span>
+                <span class="user-streak">🔥 0</span>
+            </div>
+        </header>
+
+        <!-- Asosiy kontent -->
+        <main class="main">
+            <!-- DUEL BO'LIMI -->
+            <section id="duel-section" class="section active">
+                <!-- Duel boshlash ekrani -->
+                <div id="duel-start-screen" class="duel-start-screen">
+                    <div class="start-card">
+                        <h1>⚡ YHQ Duel</h1>
+                        <p class="start-description">Sun'iy intellektga qarshi bellashing va bilimingizni sinang!</p>
+                        
+                        <div class="game-options">
+                            <div class="option-group">
+                                <label>Savollar soni:</label>
+                                <select id="question-count" class="custom-select">
+                                    <option value="5">5 ta savol (Tezkor)</option>
+                                    <option value="10" selected>10 ta savol (Standart)</option>
+                                    <option value="20">20 ta savol (To'liq imtihon)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="start-duel-btn" class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i> Duelni Boshlash
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Duel o'yin ekrani -->
+                <div id="duel-game-screen" class="duel-game-screen" style="display: none;">
+                    <!-- O'yinchilar paneli -->
+                    <div class="players-container">
+                        <!-- Sizning kartangiz -->
+                        <div class="player-card user-card">
+                            <div class="player-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="player-info">
+                                <h3>Siz</h3>
+                                <div class="player-score" id="user-score">0</div>
+                            </div>
+                            <div class="player-emoji" id="user-emoji">😊</div>
+                        </div>
+
+                        <!-- VS ko'rsatkichi -->
+                        <div class="vs-badge">
+                            <span>VS</span>
+                            <div class="round-indicator" id="round-indicator">1/10</div>
+                        </div>
+
+                        <!-- Bot kartasi -->
+                        <div class="player-card bot-card">
+                            <div class="player-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="player-info">
+                                <h3 id="bot-name">Bot</h3>
+                                <span class="bot-level" id="bot-level">O'rta</span>
+                                <div class="player-score" id="bot-score">0</div>
+                            </div>
+                            <div class="player-emoji" id="bot-emoji">🤖</div>
+                        </div>
+                    </div>
+
+                    <!-- Savol paneli -->
+                    <div class="question-panel">
+                        <div class="question-header">
+                            <div class="timer-container">
+                                <div class="timer-circle">
+                                    <svg width="80" height="80" viewBox="0 0 100 100">
+                                        <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+                                        <circle class="timer-progress" cx="50" cy="50" r="45" id="timer-progress"></circle>
+                                    </svg>
+                                    <div class="timer-text" id="timer-display">15</div>
+                                </div>
+                            </div>
+                            <div class="question-category" id="question-category">Yo'l belgilari</div>
+                            <div class="question-difficulty" id="question-difficulty">
+                                <span class="difficulty-badge">Oson</span>
+                            </div>
+                        </div>
+
+                        <div class="question-content">
+                            <p id="question-text">Savol yuklanmoqda...</p>
+                        </div>
+
+                        <div class="options-container" id="options-container">
+                            <!-- Variantlar JavaScript orqali to'ldiriladi -->
+                        </div>
+                    </div>
+
+                    <!-- Bot holati paneli -->
+                    <div class="bot-status-panel" id="bot-status">
+                        <div class="bot-thinking" id="bot-thinking" style="display: none;">
+                            <span class="thinking-text">Raqib o'ylamoqda</span>
+                            <span class="thinking-dots">...</span>
+                            <span class="thinking-emoji" id="thinking-emoji">🤔</span>
+                        </div>
+                        <div class="bot-answered" id="bot-answered" style="display: none;">
+                            <span>Raqib javob berdi: </span>
+                            <span class="bot-answer-emoji" id="bot-answer-emoji">✅</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duel natija ekrani -->
+                <div id="duel-result-screen" class="duel-result-screen" style="display: none;">
+                    <div class="result-card">
+                        <div class="result-icon" id="result-icon">🏆</div>
+                        <h2 id="result-title">G'alaba!</h2>
+                        <p id="result-message">Siz imtihondan muvaffaqiyatli o'tdingiz!</p>
+                        
+                        <div class="result-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Sizning ballingiz</span>
+                                <span class="stat-value" id="final-user-score">18/20</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Raqib balli</span>
+                                <span class="stat-value" id="final-bot-score">16/20</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Foiz</span>
+                                <span class="stat-value" id="final-percentage">90%</span>
+                            </div>
+                        </div>
+
+                        <div class="exam-result" id="exam-result">
+                            <!-- Imtihon natijasi bu yerda ko'rsatiladi -->
+                        </div>
+
+                        <div class="result-actions">
+                            <button class="btn btn-primary" onclick="location.reload()">
+                                <i class="fas fa-redo"></i> Yangi duel
+                            </button>
+                            <button class="btn btn-secondary" id="review-answers-btn">
+                                <i class="fas fa-list"></i> Javoblarni ko'rish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- O'RGANISH BO'LIMI -->
+            <section id="learn-section" class="section" style="display: none;">
+                <div class="learn-container">
+                    <div class="learn-header">
+                        <h2><i class="fas fa-graduation-cap"></i> Barcha savollar va javoblar</h2>
+                        <div class="learn-filters">
+                            <select id="category-filter" class="custom-select">
+                                <option value="all">Barcha kategoriyalar</option>
+                            </select>
+                            <button id="random-learn-btn" class="btn btn-outline">
+                                <i class="fas fa-random"></i> Tasodifiy 10 ta
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="questions-list" id="questions-list">
+                        <!-- Savollar ro'yxati JavaScript orqali to'ldiriladi -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATISTIKA BO'LIMI -->
+            <section id="stats-section" class="section" style="display: none;">
+                <div class="stats-container">
+                    <h2><i class="fas fa-chart-line"></i> Statistika</h2>
+                    <div class="stats-grid" id="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-trophy"></i>
+                            <span class="stat-number" id="total-duels">0</span>
+                            <span class="stat-name">Jami duellar</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-crown"></i>
+                            <span class="stat-number" id="wins">0</span>
+                            <span class="stat-name">G'alabalar</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-percent"></i>
+                            <span class="stat-number" id="winrate">0%</span>
+                            <span class="stat-name">G'alaba foizi</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-fire"></i>
+                            <span class="stat-number" id="best-streak">0</span>
+                            <span class="stat-name">Eng yaxshi seriya</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 YHQ Duel - O'zbekiston YHQ savollari asosida tayyorlangan</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
