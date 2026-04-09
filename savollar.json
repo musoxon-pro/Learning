@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "kategoriya": "Yo'l belgilari",
+    "savol": "Svetaforning sariq chirog'i yonib-o'chib turgan bo'lsa, bu nimani anglatadi?",
+    "variantlar": [
+      "To'xtash chizig'ida to'xtash kerak",
+      "Harakatni davom ettirish mumkin",
+      "Tartibga solinmagan chorraha",
+      "Tezlikni oshirib o'tish kerak"
+    ],
+    "javob": 2,
+    "izoh": "Sariq chiroq yonib-o'chsa, chorraha tartibga solinmagan hisoblanadi va haydovchilar yo'l belgilariga amal qilishi kerak.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 2,
+    "kategoriya": "Harakatlanish qoidalari",
+    "savol": "Avtomobil yo'lida burilish uchun qaysi qatordan burilish kerak?",
+    "variantlar": [
+      "Chap chetki qatordan",
+      "O'ng chetki qatordan",
+      "O'rtadagi qatordan",
+      "Ixtiyoriy qatordan"
+    ],
+    "javob": 0,
+    "izoh": "Chapga burilish uchun eng chap qatordan, o'ngga burilish uchun eng o'ng qatordan burilish kerak.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 3,
+    "kategoriya": "Tezlik cheklovlari",
+    "savol": "Aholi yashash joylarida avtomobillarning ruxsat etilgan maksimal tezligi qancha?",
+    "variantlar": [
+      "50 km/soat",
+      "60 km/soat",
+      "70 km/soat",
+      "40 km/soat"
+    ],
+    "javob": 1,
+    "izoh": "Aholi yashash joylarida maksimal tezlik 60 km/soat qilib belgilangan.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 4,
+    "kategoriya": "Birinchi yordam",
+    "savol": "Jabrlangan odam nafas olmayotgan bo'lsa, birinchi navbatda nima qilish kerak?",
+    "variantlar": [
+      "Tez yordam chaqirish",
+      "Sun'iy nafas berishni boshlash",
+      "Yurak massajini boshlash",
+      "Jabrlangan og'zini tozalash"
+    ],
+    "javob": 2,
+    "izoh": "Nafas yo'qligida avvalo yurak massajini boshlash kerak, chunki qon aylanishini ta'minlash muhim.",
+    "qiyinlik": "qiyin"
+  },
+  {
+    "id": 5,
+    "kategoriya": "Yo'l belgilari",
+    "savol": "\"To'xtash taqiqlanadi\" belgisi qanday ko'rinishda bo'ladi?",
+    "variantlar": [
+      "Qizil doira ichida ko'k fon",
+      "Qizil aylana, ko'k fon, qizil X harfi",
+      "Qizil doira, oq fon, qizil chiziq",
+      "Ko'k doira, qizil chegarali"
+    ],
+    "javob": 1,
+    "izoh": "\"To'xtash taqiqlanadi\" - qizil aylana, ko'k fon va qizil X harfi ko'rinishida.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 6,
+    "kategoriya": "Harakatlanish qoidalari",
+    "savol": "Tuman vaqtida qaysi chiroqlarni yoqish kerak?",
+    "variantlar": [
+      "Faqat yaqin masofali chiroqlar",
+      "Tuman chiroqlari yoki yaqin masofali chiroqlar",
+      "Faqat gabarit chiroqlar",
+      "Uzoq masofali chiroqlar"
+    ],
+    "javob": 1,
+    "izoh": "Tumanda tuman chiroqlari yoki yaqin masofali chiroqlar bilan harakatlanish kerak.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 7,
+    "kategoriya": "Haydovchining vazifalari",
+    "savol": "Haydovchi qaysi hollarda tibbiy ko'rikdan o'tishi shart?",
+    "variantlar": [
+      "Har yili",
+      "3 yilda bir marta",
+      "5 yilda bir marta",
+      "10 yilda bir marta"
+    ],
+    "javob": 1,
+    "izoh": "Haydovchilar har 3 yilda bir marta tibbiy ko'rikdan o'tishi shart.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 8,
+    "kategoriya": "Yo'l belgilari",
+    "savol": "\"Asosiy yo'l\" belgisi qanday shaklda?",
+    "variantlar": [
+      "Uchburchak",
+      "Romb (to'rtburchak)",
+      "Doira",
+      "Kvadrat"
+    ],
+    "javob": 1,
+    "izoh": "\"Asosiy yo'l\" belgisi sariq romb (to'rtburchak) shaklida, oq hoshiyali.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 9,
+    "kategoriya": "Manevr qilish",
+    "savol": "Quvib o'tish qaysi tomondan amalga oshiriladi?",
+    "variantlar": [
+      "Faqat chap tomondan",
+      "Faqat o'ng tomondan",
+      "Chap tomondan, ayrim hollarda o'ng tomondan",
+      "Istalgan tomondan"
+    ],
+    "javob": 2,
+    "izoh": "Quvib o'tish asosan chap tomondan amalga oshiriladi, lekin chapga burilish signalini bergan avtomobilni o'ng tomondan quvib o'tish mumkin.",
+    "qiyinlik": "qiyin"
+  },
+  {
+    "id": 10,
+    "kategoriya": "Tezlik cheklovlari",
+    "savol": "Avtomagistralda yengil avtomobillar uchun ruxsat etilgan maksimal tezlik:",
+    "variantlar": [
+      "90 km/soat",
+      "100 km/soat",
+      "110 km/soat",
+      "120 km/soat"
+    ],
+    "javob": 2,
+    "izoh": "Avtomagistralda yengil avtomobillar uchun maksimal tezlik 110 km/soat.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 11,
+    "kategoriya": "Yo'l chiziqlari",
+    "savol": "Yo'l o'rtasidagi qo'sh tutash chiziq nimani anglatadi?",
+    "variantlar": [
+      "Quvib o'tish taqiqlanadi",
+      "To'xtash taqiqlanadi",
+      "Tezlikni pasaytirish kerak",
+      "Avtoturargoh joyi"
+    ],
+    "javob": 0,
+    "izoh": "Qo'sh tutash chiziq qarama-qarshi yo'nalishga chiqish va quvib o'tishni taqiqlaydi.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 12,
+    "kategoriya": "Birinchi yordam",
+    "savol": "Arterial qon ketishda nima qilish kerak?",
+    "variantlar": [
+      "Yara ustiga bint qo'yish",
+      "Jgut qo'yish",
+      "Sovuq suv bilan yuvish",
+      "Spirt bilan artish"
+    ],
+    "javob": 1,
+    "izoh": "Arterial qon ketishida jgut qo'yish kerak, chunki qon bosim bilan oqadi.",
+    "qiyinlik": "qiyin"
+  },
+  {
+    "id": 13,
+    "kategoriya": "Hujjatlar",
+    "savol": "Haydovchilik guvohnomasi necha yil muddatga beriladi?",
+    "variantlar": [
+      "5 yil",
+      "10 yil",
+      "15 yil",
+      "20 yil"
+    ],
+    "javob": 1,
+    "izoh": "O'zbekistonda haydovchilik guvohnomasi 10 yil muddatga beriladi.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 14,
+    "kategoriya": "Maxsus signallar",
+    "savol": "Tez yordam mashinasi ko'k chirog'ini yoqib, ovozli signal bilan kelayotgan bo'lsa:",
+    "variantlar": [
+      "To'xtab, yo'l berish kerak",
+      "Tezlikni oshirish kerak",
+      "Davom ettirish mumkin",
+      "Ovoz signali berish kerak"
+    ],
+    "javob": 0,
+    "izoh": "Ko'k chiroq va ovozli signal bilan kelayotgan transport vositasiga yo'l berish shart.",
+    "qiyinlik": "oson"
+  },
+  {
+    "id": 15,
+    "kategoriya": "Alkogol",
+    "savol": "Haydovchi qonida alkogolning ruxsat etilgan miqdori qancha?",
+    "variantlar": [
+      "0.0 promille",
+      "0.3 promille",
+      "0.5 promille",
+      "0.8 promille"
+    ],
+    "javob": 0,
+    "izoh": "O'zbekistonda haydovchi qonida alkogol bo'lishi mutlaqo taqiqlanadi (0.0 promille).",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 16,
+    "kategoriya": "Harakatlanish qoidalari",
+    "savol": "Tartibga soluvchi svetofor ishlamay qolganda:",
+    "variantlar": [
+      "Yo'l belgilariga amal qilish kerak",
+      "Ehtiyotkorlik bilan harakatlanish kerak",
+      "To'xtab turish kerak",
+      "Tezlikni oshirib o'tish kerak"
+    ],
+    "javob": 0,
+    "izoh": "Svetofor ishlamasa yoki sariq chiroq yonib-o'chib tursa, yo'l belgilariga amal qilish kerak.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 17,
+    "kategoriya": "Avtoturargoh",
+    "savol": "Avtomobilni qayerda qoldirish taqiqlanadi?",
+    "variantlar": [
+      "Piyodalar o'tish joyidan 5 m masofada",
+      "Jamoat transporti bekatidan 15 m masofada",
+      "Bino oldida",
+      "Yo'l chetida"
+    ],
+    "javob": 0,
+    "izoh": "Piyodalar o'tish joyidan 5 metr masofada to'xtash va turish taqiqlanadi.",
+    "qiyinlik": "qiyin"
+  },
+  {
+    "id": 18,
+    "kategoriya": "Bolalar xavfsizligi",
+    "savol": "12 yoshgacha bo'lgan bolalarni oldingi o'rindiqda tashish:",
+    "variantlar": [
+      "Taqiqlanadi",
+      "Maxsus bolalar o'rindig'i bilan ruxsat etiladi",
+      "Kattalar qo'lida ruxsat etiladi",
+      "Har doim ruxsat etiladi"
+    ],
+    "javob": 1,
+    "izoh": "12 yoshgacha bo'lgan bolalar faqat maxsus bolalar o'rindig'ida oldingi o'rindiqda tashilishi mumkin.",
+    "qiyinlik": "orta"
+  },
+  {
+    "id": 19,
+    "kategoriya": "Yuk tashish",
+    "savol": "Avtomobil yukining yo'l sathidan balandligi qancha bo'lishi mumkin?",
+    "variantlar": [
+      "2.5 metr",
+      "3.5 metr",
+      "4 metr",
+      "Cheklanmagan"
+    ],
+    "javob": 2,
+    "izoh": "Avtomobil yukining yo'l sathidan balandligi 4 metrdan oshmasligi kerak.",
+    "qiyinlik": "qiyin"
+  },
+  {
+    "id": 20,
+    "kategoriya": "Xavfsizlik kamari",
+    "savol": "Xavfsizlik kamarini taqish kimlar uchun majburiy?",
+    "variantlar": [
+      "Faqat haydovchi uchun",
+      "Oldingi o'rindiqdagi yo'lovchilar uchun",
+      "Barcha yo'lovchilar uchun",
+      "Haydovchi va barcha yo'lovchilar uchun"
+    ],
+    "javob": 3,
+    "izoh": "Xavfsizlik kamari haydovchi va barcha yo'lovchilar uchun majburiy.",
+    "qiyinlik": "oson"
+  }
+]
